@@ -1,0 +1,11 @@
+<h2>Create Board</h2>
+
+<%= form_tag("/boards", method: "post") do %>
+	<%= label_tag(:q, "3x3:") %>
+	<%= radio_button_tag 'size', 3 %>
+	<br>
+	<%= label_tag(:q, "4x4:") %>
+	<%= radio_button_tag 'size', 4 %>
+	<br>
+	<%= submit_tag("Play") %>
+<% end %>

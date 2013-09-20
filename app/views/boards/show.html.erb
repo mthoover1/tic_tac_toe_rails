@@ -1,0 +1,23 @@
+<% if @board.won? %>
+	<% if @board.move_count.even? %>
+		<h2><%= "The Computer Wins." %></h2>
+	<% else %>
+		<h2><%= "The Human Wins!" %></h2>
+	<% end %>
+<% elsif @board.tied? %>
+	<h2><%= "Cat's Game." %></h2>
+<% elsif @board.future_cats_game? %>
+	<h2><%= "Future Cat's Game (Saving You Time)." %></h2>
+<% end %>
+
+
+<div class="board">
+	<% @board.tiles.chars.each_with_index do |tile, i| %>
+		<% new_tiles = @board.tiles.dup %>
+		<% new_tiles[i] = "X" if new_tiles[i] == "-" %>
+		<a href="/boards/<%= new_tiles %>"><div class="tile" id="<%= i+1 %>"><%= tile %></div></a>
+		<% if (i+1) % @board.size == 0 %>
+			<br>
+		<% end %>
+	<% end %>
+</div>
