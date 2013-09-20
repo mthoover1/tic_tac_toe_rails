@@ -19,11 +19,6 @@ class BoardsController < ApplicationController
         computer.move
       end
     end
-
-
-    # @game = GameController.new(Interface.new, @board)
-    # @board.update(5, "X")
-    # @board.update(9, "O")
   end
 
   def edit

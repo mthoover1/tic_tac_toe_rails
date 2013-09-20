@@ -1,5 +1,7 @@
 body {
 	margin: 0;
+	background-color: #771991;
+	font-family: sans-serif;
 }
 
 nav {
@@ -7,9 +9,9 @@ nav {
 	font-size: 46px;
 	line-height: 66px;
 	font-weight: bold;
-	font-family: sans-serif;
 	background-color: #771991;
 	text-align: center;
+	border-bottom: 5px solid white;
 }
 
 nav a {
@@ -21,8 +23,19 @@ nav a {
 	margin: 0 20px;
 }
 
+h2 {
+	color: white;
+	text-decoration: underline;
+}
+
+form {
+	color: white;
+	font-size: 20px;
+}
+
 .board {
 	/*width: 600px;*/
+	font-family: serif;
 	margin-top: 20px;
 	padding: 4px 0 0 4px;
 	background-color: #771991;
