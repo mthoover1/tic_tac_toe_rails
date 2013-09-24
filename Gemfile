@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'tic_tac_toe', '0.0.2' #, :path => '../tic_tac_toe'
+gem 'tic_tac_toe', :git => 'https://github.com/mthoover1/tic-tac-toe.git'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
