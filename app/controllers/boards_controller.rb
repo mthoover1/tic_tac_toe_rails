@@ -4,10 +4,18 @@ class BoardsController < ApplicationController
 
   def create
     @board = Board.new(params[:size].to_i)
-    redirect_to board_path(@board.tiles)
+    # params.merge(:tiles => @board.tiles.split(""))
+    # params[:tiles] = @board.tiles.split("")
+    redirect_to board_path(@board.tiles) #, tiles: @board.tiles.split(""))
   end
 
   def show
+    # tiles = params[:tiles].flatten.join   # may not have to flatten
+    # size = Math.sqrt(tiles.length).to_i
+    # @board = Board.new(size)
+    # @board.tiles = tiles
+    # @board.move_count = @board.count_moves
+
     @size = Math.sqrt(params[:id].length)
     @board = Board.new(@size.to_i)
     @board.tiles = params[:id]
