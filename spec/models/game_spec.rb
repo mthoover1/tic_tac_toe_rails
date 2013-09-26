@@ -8,7 +8,16 @@ describe Game do
     board.move_count.should eq(0)
   end
 
-  xit "should make the appropriate computer move" do
+  it "should make the appropriate computer move" do
+    scenarios = [ ['OO-X--XX-','OOOX--XX-'],
+                  ['X--------','X---O----'],
+                  ['XX--O----','XXO-O----']
+                ]
 
+    scenarios.each_with_index do |tiles, i|
+      board = Game.build_board(tiles[0])
+      Game.computer_move(board)
+      board.tiles.should eq(tiles[1]), "Test #{i+1}: #{tiles[0]} should lead to #{tiles[1]}"
+    end
   end
 end
