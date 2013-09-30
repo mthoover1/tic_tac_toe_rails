@@ -11,19 +11,30 @@
 <% end %>
 
 <% if @board.won? || @board.tied? || @board.future_cats_game? %>
+
 	<% tile_string = "-"*(@board.size**2)%>
 	<h3><a href="/boards/<%= tile_string %>">Rematch</a></h3>
 	<h3><a href="/">Change Board Size</a></h3>
-<% end %>
-
-
-<div class="board">
-	<% @board.tiles.chars.each_with_index do |tile, i| %>
-		<% new_tiles = @board.tiles.dup %>
-		<% new_tiles[i] = "X" if new_tiles[i] == "-" %>
-		<a href="/boards/<%= new_tiles %>"><div class="tile" id="<%= i+1 %>"><%= tile %></div></a>
-		<% if (i+1) % @board.size == 0 %>
-			<br>
+	<div class="board">
+		<% @board.tiles.chars.each_with_index do |tile, i| %>
+			<div class="tile" id="<%= i+1 %>"><%= tile %></div>
+			<% if (i+1) % @board.size == 0 %>
+				<br>
+			<% end %>
 		<% end %>
-	<% end %>
-</div>
+	</div>
+
+<% else %>
+
+	<div class="board">
+		<% @board.tiles.chars.each_with_index do |tile, i| %>
+			<% new_tiles = @board.tiles.dup %>
+			<% new_tiles[i] = "X" if new_tiles[i] == "-" %>
+			<a href="/boards/<%= new_tiles %>"><div class="tile" id="<%= i+1 %>"><%= tile %></div></a>
+			<% if (i+1) % @board.size == 0 %>
+				<br>
+			<% end %>
+		<% end %>
+	</div>
+
+<% end %>
