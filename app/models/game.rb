@@ -1,5 +1,11 @@
 class Game
-  def self.create_board(tiles)
+  attr_reader :board
+
+  def initialize(tiles)
+    @board = create_board(tiles)
+  end
+
+  def create_board(tiles)
     size = Math.sqrt(tiles.length)
     board = Board.new(size.to_i)
     board.tiles = tiles
@@ -7,10 +13,10 @@ class Game
     board
   end
 
-  def self.computer_move(board)
-    unless board.game_over?
-      if board.move_count.odd?
-        computer = ComputerPlayer.new(board)
+  def computer_move
+    unless @board.game_over?
+      if @board.move_count.odd?
+        computer = ComputerPlayer.new(@board)
         computer.move
       end
     end

@@ -8,7 +8,8 @@ class BoardsController < ApplicationController
   end
 
   def show
-    @board = Game.create_board(params[:id])
-    Game.computer_move(@board)
+    game = Game.new(params[:id])
+    game.computer_move
+    @board = game.board
   end
 end
