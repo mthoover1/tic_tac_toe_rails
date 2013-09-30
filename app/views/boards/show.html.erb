@@ -10,7 +10,7 @@
 	<h2><%= "Future Cat's Game (Saving You Time)." %></h2>
 <% end %>
 
-<% if @board.won? || @board.tied? || @board.future_cats_game? %>
+<% if @board.game_over? %>
 
 	<% tile_string = "-"*(@board.size**2)%>
 	<h3><a href="/boards/<%= tile_string %>">Rematch</a></h3>

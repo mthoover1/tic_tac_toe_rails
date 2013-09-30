@@ -8,7 +8,7 @@ class Game
   end
 
   def self.computer_move(board)
-    unless board.won? || board.tied? || board.future_cats_game?
+    unless board.game_over?
       if board.move_count.odd?
         computer = ComputerPlayer.new(board)
         computer.move
