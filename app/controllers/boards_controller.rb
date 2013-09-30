@@ -8,7 +8,7 @@ class BoardsController < ApplicationController
   end
 
   def show
-    @board = Game.build_board(params[:id])
+    @board = Game.generate_blank_tiles(params[:id])
     Game.computer_move(@board)
   end
 end
