@@ -1,5 +1,5 @@
 class Game
-  def self.generate_blank_tiles(tiles)
+  def self.create_board(tiles)
     size = Math.sqrt(tiles.length)
     board = Board.new(size.to_i)
     board.tiles = tiles

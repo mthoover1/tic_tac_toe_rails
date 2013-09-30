@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Game do
   it "should build a board when given a string of tiles" do
-    board = Game.generate_blank_tiles('---------')
+    board = Game.create_board('---------')
     board.tiles.should eq('---------')
     board.size.should eq(3)
     board.move_count.should eq(0)
@@ -15,7 +15,7 @@ describe Game do
                 ]
 
     scenarios.each_with_index do |tiles, i|
-      board = Game.generate_blank_tiles(tiles[0])
+      board = Game.create_board(tiles[0])
       Game.computer_move(board)
       board.tiles.should eq(tiles[1]), "Test #{i+1}: #{tiles[0]} should lead to #{tiles[1]}"
     end

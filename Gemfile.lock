@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/mthoover1/tic-tac-toe.git
-  revision: 13b7a8906f1ff5d27a0a86028093a131e84d7818
+  revision: 2854aafbd140f798b4a7d72b46251f9a81d0db5b
   specs:
     tic_tac_toe (0.0.2)
 
@@ -43,7 +43,7 @@ GEM
     coffee-script-source (1.6.3)
     diff-lcs (1.2.4)
     erubis (2.7.0)
-    execjs (2.0.1)
+    execjs (2.0.2)
     hike (1.2.3)
     i18n (0.6.5)
     jbuilder (1.5.1)
@@ -90,7 +90,7 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    sass (3.2.10)
+    sass (3.2.11)
     sass-rails (4.0.0)
       railties (>= 4.0.0.beta, < 5.0)
       sass (>= 3.1.10)
