@@ -17,8 +17,8 @@ class Game
   private
 
   def create_board(tiles)
-    size = Math.sqrt(tiles.length)
-    board = Board.new(size.to_i)
+    size = Math.sqrt(tiles.length).to_i
+    board = Board.new(size)
     board.tiles = tiles
     board.move_count = board.count_moves
     board
