@@ -9,7 +9,7 @@ class Game
     unless @board.game_over?
       if @board.move_count.odd?
         computer = ComputerPlayer.new(@board)
-        computer.move
+        @board.update_tile(computer.get_move, computer.symbol)
       end
     end
   end
