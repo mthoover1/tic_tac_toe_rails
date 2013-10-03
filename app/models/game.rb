@@ -6,12 +6,8 @@ class Game
   end
 
   def computer_move
-    unless @board.game_over?
-      if @board.move_count.odd?
-        computer = ComputerPlayer.new(@board)
-        @board.update_tile(computer.get_move, computer.symbol)
-      end
-    end
+    computer = ComputerPlayer.new(@board)
+    @board.update_tile(computer.get_move, computer.symbol)
   end
 
   private

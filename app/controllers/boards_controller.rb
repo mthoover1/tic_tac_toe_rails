@@ -9,7 +9,7 @@ class BoardsController < ApplicationController
 
   def show
     game = Game.new(params[:id])
-    game.computer_move
     @board = game.board
+    game.computer_move if @board.move_count.odd? && !@board.game_over?
   end
 end
