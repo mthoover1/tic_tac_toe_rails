@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/mthoover1/tic-tac-toe.git
-  revision: e43401c321f39048aacc30b688906c4fb96b960e
+  revision: 18040794f67f47031cff2075c36c908c443d8cbf
   specs:
     tic_tac_toe (0.0.2)
 
@@ -58,7 +58,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25)
     minitest (4.7.5)
-    multi_json (1.8.0)
+    multi_json (1.8.1)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-test (0.6.2)
